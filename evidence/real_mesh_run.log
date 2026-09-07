@@ -1,0 +1,11 @@
+Original-file checksums: 21/21 PASS
+20251028220042 order=0: invalid-supported accepted 0 -> 0; median 0.0061s -> 0.0063s; common coordinates BIT-EXACT
+20251028220042 order=1: invalid-supported accepted 29,900 -> 0; median 0.0047s -> 0.0048s; common coordinates BIT-EXACT
+20251028220042 order=3: invalid-supported accepted 29,100 -> 0; median 0.0058s -> 0.0063s; common coordinates BIT-EXACT
+20251028220955 order=0: invalid-supported accepted 0 -> 0; median 0.0051s -> 0.0051s; common coordinates BIT-EXACT
+20251028220955 order=1: invalid-supported accepted 29,500 -> 0; median 0.0036s -> 0.0036s; common coordinates BIT-EXACT
+20251028220955 order=3: invalid-supported accepted 28,700 -> 0; median 0.0045s -> 0.0053s; common coordinates BIT-EXACT
+20251029010146 order=0: invalid-supported accepted 0 -> 0; median 0.0012s -> 0.0012s; common coordinates BIT-EXACT
+20251029010146 order=1: invalid-supported accepted 14,700 -> 0; median 0.0009s -> 0.0009s; common coordinates BIT-EXACT
+20251029010146 order=3: invalid-supported accepted 13,900 -> 0; median 0.0010s -> 0.0012s; common coordinates BIT-EXACT
+Real-data validation PASS; all originals unchanged.

@@ -1,0 +1,2323 @@
+{
+  "cv2_version": "5.0.0",
+  "optimized": true,
+  "candidate_evaluated": false,
+  "ipp_enabled": false,
+  "oracle": "float32 basis impulse; exactly nonzero coefficient; no candidate helper calls",
+  "cases": [
+    {
+      "case": "identity",
+      "source_shape": [
+        5,
+        6
+      ],
+      "destination_shape": [
+        5,
+        6
+      ],
+      "order": 1,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 30
+    },
+    {
+      "case": "identity",
+      "source_shape": [
+        5,
+        6
+      ],
+      "destination_shape": [
+        5,
+        6
+      ],
+      "order": 1,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "identity",
+      "source_shape": [
+        5,
+        6
+      ],
+      "destination_shape": [
+        5,
+        6
+      ],
+      "order": 1,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 29
+    },
+    {
+      "case": "identity",
+      "source_shape": [
+        5,
+        6
+      ],
+      "destination_shape": [
+        5,
+        6
+      ],
+      "order": 1,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 29
+    },
+    {
+      "case": "identity",
+      "source_shape": [
+        5,
+        6
+      ],
+      "destination_shape": [
+        5,
+        6
+      ],
+      "order": 1,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 29
+    },
+    {
+      "case": "identity",
+      "source_shape": [
+        5,
+        6
+      ],
+      "destination_shape": [
+        5,
+        6
+      ],
+      "order": 1,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 15
+    },
+    {
+      "case": "identity",
+      "source_shape": [
+        5,
+        6
+      ],
+      "destination_shape": [
+        5,
+        6
+      ],
+      "order": 1,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 12
+    },
+    {
+      "case": "identity",
+      "source_shape": [
+        5,
+        6
+      ],
+      "destination_shape": [
+        5,
+        6
+      ],
+      "order": 3,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 30
+    },
+    {
+      "case": "identity",
+      "source_shape": [
+        5,
+        6
+      ],
+      "destination_shape": [
+        5,
+        6
+      ],
+      "order": 3,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "identity",
+      "source_shape": [
+        5,
+        6
+      ],
+      "destination_shape": [
+        5,
+        6
+      ],
+      "order": 3,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 29
+    },
+    {
+      "case": "identity",
+      "source_shape": [
+        5,
+        6
+      ],
+      "destination_shape": [
+        5,
+        6
+      ],
+      "order": 3,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 29
+    },
+    {
+      "case": "identity",
+      "source_shape": [
+        5,
+        6
+      ],
+      "destination_shape": [
+        5,
+        6
+      ],
+      "order": 3,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 29
+    },
+    {
+      "case": "identity",
+      "source_shape": [
+        5,
+        6
+      ],
+      "destination_shape": [
+        5,
+        6
+      ],
+      "order": 3,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 15
+    },
+    {
+      "case": "identity",
+      "source_shape": [
+        5,
+        6
+      ],
+      "destination_shape": [
+        5,
+        6
+      ],
+      "order": 3,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 12
+    },
+    {
+      "case": "double_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        8,
+        10
+      ],
+      "order": 1,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 80
+    },
+    {
+      "case": "double_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        8,
+        10
+      ],
+      "order": 1,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "double_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        8,
+        10
+      ],
+      "order": 1,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 64
+    },
+    {
+      "case": "double_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        8,
+        10
+      ],
+      "order": 1,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 71
+    },
+    {
+      "case": "double_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        8,
+        10
+      ],
+      "order": 1,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 71
+    },
+    {
+      "case": "double_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        8,
+        10
+      ],
+      "order": 1,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 2
+    },
+    {
+      "case": "double_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        8,
+        10
+      ],
+      "order": 1,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 8
+    },
+    {
+      "case": "double_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        8,
+        10
+      ],
+      "order": 3,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 80
+    },
+    {
+      "case": "double_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        8,
+        10
+      ],
+      "order": 3,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "double_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        8,
+        10
+      ],
+      "order": 3,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 24
+    },
+    {
+      "case": "double_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        8,
+        10
+      ],
+      "order": 3,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 55
+    },
+    {
+      "case": "double_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        8,
+        10
+      ],
+      "order": 3,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 55
+    },
+    {
+      "case": "double_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        8,
+        10
+      ],
+      "order": 3,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "double_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        8,
+        10
+      ],
+      "order": 3,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "noninteger_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        7,
+        9
+      ],
+      "order": 1,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 63
+    },
+    {
+      "case": "noninteger_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        7,
+        9
+      ],
+      "order": 1,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "noninteger_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        7,
+        9
+      ],
+      "order": 1,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 54
+    },
+    {
+      "case": "noninteger_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        7,
+        9
+      ],
+      "order": 1,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 54
+    },
+    {
+      "case": "noninteger_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        7,
+        9
+      ],
+      "order": 1,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 54
+    },
+    {
+      "case": "noninteger_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        7,
+        9
+      ],
+      "order": 1,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 3
+    },
+    {
+      "case": "noninteger_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        7,
+        9
+      ],
+      "order": 1,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 3
+    },
+    {
+      "case": "noninteger_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        7,
+        9
+      ],
+      "order": 3,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 63
+    },
+    {
+      "case": "noninteger_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        7,
+        9
+      ],
+      "order": 3,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "noninteger_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        7,
+        9
+      ],
+      "order": 3,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 21
+    },
+    {
+      "case": "noninteger_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        7,
+        9
+      ],
+      "order": 3,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 47
+    },
+    {
+      "case": "noninteger_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        7,
+        9
+      ],
+      "order": 3,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 47
+    },
+    {
+      "case": "noninteger_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        7,
+        9
+      ],
+      "order": 3,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "noninteger_up",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        7,
+        9
+      ],
+      "order": 3,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "anisotropic_mixed",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 1,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 27
+    },
+    {
+      "case": "anisotropic_mixed",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 1,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "anisotropic_mixed",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 1,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 22
+    },
+    {
+      "case": "anisotropic_mixed",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 1,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 24
+    },
+    {
+      "case": "anisotropic_mixed",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 1,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 24
+    },
+    {
+      "case": "anisotropic_mixed",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 1,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 1
+    },
+    {
+      "case": "anisotropic_mixed",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 1,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 3
+    },
+    {
+      "case": "anisotropic_mixed",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 3,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 27
+    },
+    {
+      "case": "anisotropic_mixed",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 3,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "anisotropic_mixed",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 3,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 3
+    },
+    {
+      "case": "anisotropic_mixed",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 3,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 21
+    },
+    {
+      "case": "anisotropic_mixed",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 3,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 21
+    },
+    {
+      "case": "anisotropic_mixed",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 3,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "anisotropic_mixed",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 3,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "double_down_area_shortcut",
+      "source_shape": [
+        6,
+        8
+      ],
+      "destination_shape": [
+        3,
+        4
+      ],
+      "order": 1,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 12
+    },
+    {
+      "case": "double_down_area_shortcut",
+      "source_shape": [
+        6,
+        8
+      ],
+      "destination_shape": [
+        3,
+        4
+      ],
+      "order": 1,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "double_down_area_shortcut",
+      "source_shape": [
+        6,
+        8
+      ],
+      "destination_shape": [
+        3,
+        4
+      ],
+      "order": 1,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 11
+    },
+    {
+      "case": "double_down_area_shortcut",
+      "source_shape": [
+        6,
+        8
+      ],
+      "destination_shape": [
+        3,
+        4
+      ],
+      "order": 1,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 11
+    },
+    {
+      "case": "double_down_area_shortcut",
+      "source_shape": [
+        6,
+        8
+      ],
+      "destination_shape": [
+        3,
+        4
+      ],
+      "order": 1,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 11
+    },
+    {
+      "case": "double_down_area_shortcut",
+      "source_shape": [
+        6,
+        8
+      ],
+      "destination_shape": [
+        3,
+        4
+      ],
+      "order": 1,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "double_down_area_shortcut",
+      "source_shape": [
+        6,
+        8
+      ],
+      "destination_shape": [
+        3,
+        4
+      ],
+      "order": 1,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 2
+    },
+    {
+      "case": "double_down_area_shortcut",
+      "source_shape": [
+        6,
+        8
+      ],
+      "destination_shape": [
+        3,
+        4
+      ],
+      "order": 3,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 12
+    },
+    {
+      "case": "double_down_area_shortcut",
+      "source_shape": [
+        6,
+        8
+      ],
+      "destination_shape": [
+        3,
+        4
+      ],
+      "order": 3,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "double_down_area_shortcut",
+      "source_shape": [
+        6,
+        8
+      ],
+      "destination_shape": [
+        3,
+        4
+      ],
+      "order": 3,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 8
+    },
+    {
+      "case": "double_down_area_shortcut",
+      "source_shape": [
+        6,
+        8
+      ],
+      "destination_shape": [
+        3,
+        4
+      ],
+      "order": 3,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 11
+    },
+    {
+      "case": "double_down_area_shortcut",
+      "source_shape": [
+        6,
+        8
+      ],
+      "destination_shape": [
+        3,
+        4
+      ],
+      "order": 3,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 11
+    },
+    {
+      "case": "double_down_area_shortcut",
+      "source_shape": [
+        6,
+        8
+      ],
+      "destination_shape": [
+        3,
+        4
+      ],
+      "order": 3,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "double_down_area_shortcut",
+      "source_shape": [
+        6,
+        8
+      ],
+      "destination_shape": [
+        3,
+        4
+      ],
+      "order": 3,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 2
+    },
+    {
+      "case": "one_axis_identity",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        4,
+        9
+      ],
+      "order": 1,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 36
+    },
+    {
+      "case": "one_axis_identity",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        4,
+        9
+      ],
+      "order": 1,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "one_axis_identity",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        4,
+        9
+      ],
+      "order": 1,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 33
+    },
+    {
+      "case": "one_axis_identity",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        4,
+        9
+      ],
+      "order": 1,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 33
+    },
+    {
+      "case": "one_axis_identity",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        4,
+        9
+      ],
+      "order": 1,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 33
+    },
+    {
+      "case": "one_axis_identity",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        4,
+        9
+      ],
+      "order": 1,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 6
+    },
+    {
+      "case": "one_axis_identity",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        4,
+        9
+      ],
+      "order": 1,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 6
+    },
+    {
+      "case": "one_axis_identity",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        4,
+        9
+      ],
+      "order": 3,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 36
+    },
+    {
+      "case": "one_axis_identity",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        4,
+        9
+      ],
+      "order": 3,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "one_axis_identity",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        4,
+        9
+      ],
+      "order": 3,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 29
+    },
+    {
+      "case": "one_axis_identity",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        4,
+        9
+      ],
+      "order": 3,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 32
+    },
+    {
+      "case": "one_axis_identity",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        4,
+        9
+      ],
+      "order": 3,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 32
+    },
+    {
+      "case": "one_axis_identity",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        4,
+        9
+      ],
+      "order": 3,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 2
+    },
+    {
+      "case": "one_axis_identity",
+      "source_shape": [
+        4,
+        5
+      ],
+      "destination_shape": [
+        4,
+        9
+      ],
+      "order": 3,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 2
+    },
+    {
+      "case": "one_axis_half",
+      "source_shape": [
+        6,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 1,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 27
+    },
+    {
+      "case": "one_axis_half",
+      "source_shape": [
+        6,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 1,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "one_axis_half",
+      "source_shape": [
+        6,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 1,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 24
+    },
+    {
+      "case": "one_axis_half",
+      "source_shape": [
+        6,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 1,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 24
+    },
+    {
+      "case": "one_axis_half",
+      "source_shape": [
+        6,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 1,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 24
+    },
+    {
+      "case": "one_axis_half",
+      "source_shape": [
+        6,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 1,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "one_axis_half",
+      "source_shape": [
+        6,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 1,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 3
+    },
+    {
+      "case": "one_axis_half",
+      "source_shape": [
+        6,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 3,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 27
+    },
+    {
+      "case": "one_axis_half",
+      "source_shape": [
+        6,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 3,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "one_axis_half",
+      "source_shape": [
+        6,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 3,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 13
+    },
+    {
+      "case": "one_axis_half",
+      "source_shape": [
+        6,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 3,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 23
+    },
+    {
+      "case": "one_axis_half",
+      "source_shape": [
+        6,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 3,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 23
+    },
+    {
+      "case": "one_axis_half",
+      "source_shape": [
+        6,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 3,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "one_axis_half",
+      "source_shape": [
+        6,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 3,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 1
+    },
+    {
+      "case": "one_row",
+      "source_shape": [
+        1,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 1,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 27
+    },
+    {
+      "case": "one_row",
+      "source_shape": [
+        1,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 1,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "one_row",
+      "source_shape": [
+        1,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 1,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 18
+    },
+    {
+      "case": "one_row",
+      "source_shape": [
+        1,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 1,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 18
+    },
+    {
+      "case": "one_row",
+      "source_shape": [
+        1,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 1,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 18
+    },
+    {
+      "case": "one_row",
+      "source_shape": [
+        1,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 1,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 9
+    },
+    {
+      "case": "one_row",
+      "source_shape": [
+        1,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 1,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "one_row",
+      "source_shape": [
+        1,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 3,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 27
+    },
+    {
+      "case": "one_row",
+      "source_shape": [
+        1,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 3,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "one_row",
+      "source_shape": [
+        1,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 3,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 6
+    },
+    {
+      "case": "one_row",
+      "source_shape": [
+        1,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 3,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 15
+    },
+    {
+      "case": "one_row",
+      "source_shape": [
+        1,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 3,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 15
+    },
+    {
+      "case": "one_row",
+      "source_shape": [
+        1,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 3,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 3
+    },
+    {
+      "case": "one_row",
+      "source_shape": [
+        1,
+        5
+      ],
+      "destination_shape": [
+        3,
+        9
+      ],
+      "order": 3,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "one_column",
+      "source_shape": [
+        5,
+        1
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 1,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 27
+    },
+    {
+      "case": "one_column",
+      "source_shape": [
+        5,
+        1
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 1,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "one_column",
+      "source_shape": [
+        5,
+        1
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 1,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 18
+    },
+    {
+      "case": "one_column",
+      "source_shape": [
+        5,
+        1
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 1,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 18
+    },
+    {
+      "case": "one_column",
+      "source_shape": [
+        5,
+        1
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 1,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 18
+    },
+    {
+      "case": "one_column",
+      "source_shape": [
+        5,
+        1
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 1,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 9
+    },
+    {
+      "case": "one_column",
+      "source_shape": [
+        5,
+        1
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 1,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "one_column",
+      "source_shape": [
+        5,
+        1
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 3,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 27
+    },
+    {
+      "case": "one_column",
+      "source_shape": [
+        5,
+        1
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 3,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "one_column",
+      "source_shape": [
+        5,
+        1
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 3,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 6
+    },
+    {
+      "case": "one_column",
+      "source_shape": [
+        5,
+        1
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 3,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 15
+    },
+    {
+      "case": "one_column",
+      "source_shape": [
+        5,
+        1
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 3,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 15
+    },
+    {
+      "case": "one_column",
+      "source_shape": [
+        5,
+        1
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 3,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 3
+    },
+    {
+      "case": "one_column",
+      "source_shape": [
+        5,
+        1
+      ],
+      "destination_shape": [
+        9,
+        3
+      ],
+      "order": 3,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "integer_source_centers",
+      "source_shape": [
+        3,
+        3
+      ],
+      "destination_shape": [
+        9,
+        9
+      ],
+      "order": 1,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 81
+    },
+    {
+      "case": "integer_source_centers",
+      "source_shape": [
+        3,
+        3
+      ],
+      "destination_shape": [
+        9,
+        9
+      ],
+      "order": 1,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "integer_source_centers",
+      "source_shape": [
+        3,
+        3
+      ],
+      "destination_shape": [
+        9,
+        9
+      ],
+      "order": 1,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 56
+    },
+    {
+      "case": "integer_source_centers",
+      "source_shape": [
+        3,
+        3
+      ],
+      "destination_shape": [
+        9,
+        9
+      ],
+      "order": 1,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 65
+    },
+    {
+      "case": "integer_source_centers",
+      "source_shape": [
+        3,
+        3
+      ],
+      "destination_shape": [
+        9,
+        9
+      ],
+      "order": 1,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 65
+    },
+    {
+      "case": "integer_source_centers",
+      "source_shape": [
+        3,
+        3
+      ],
+      "destination_shape": [
+        9,
+        9
+      ],
+      "order": 1,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 17
+    },
+    {
+      "case": "integer_source_centers",
+      "source_shape": [
+        3,
+        3
+      ],
+      "destination_shape": [
+        9,
+        9
+      ],
+      "order": 1,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 1
+    },
+    {
+      "case": "integer_source_centers",
+      "source_shape": [
+        3,
+        3
+      ],
+      "destination_shape": [
+        9,
+        9
+      ],
+      "order": 3,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 81
+    },
+    {
+      "case": "integer_source_centers",
+      "source_shape": [
+        3,
+        3
+      ],
+      "destination_shape": [
+        9,
+        9
+      ],
+      "order": 3,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "integer_source_centers",
+      "source_shape": [
+        3,
+        3
+      ],
+      "destination_shape": [
+        9,
+        9
+      ],
+      "order": 3,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 32
+    },
+    {
+      "case": "integer_source_centers",
+      "source_shape": [
+        3,
+        3
+      ],
+      "destination_shape": [
+        9,
+        9
+      ],
+      "order": 3,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 45
+    },
+    {
+      "case": "integer_source_centers",
+      "source_shape": [
+        3,
+        3
+      ],
+      "destination_shape": [
+        9,
+        9
+      ],
+      "order": 3,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 45
+    },
+    {
+      "case": "integer_source_centers",
+      "source_shape": [
+        3,
+        3
+      ],
+      "destination_shape": [
+        9,
+        9
+      ],
+      "order": 3,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 5
+    },
+    {
+      "case": "integer_source_centers",
+      "source_shape": [
+        3,
+        3
+      ],
+      "destination_shape": [
+        9,
+        9
+      ],
+      "order": 3,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 1
+    },
+    {
+      "case": "noninteger_down",
+      "source_shape": [
+        7,
+        8
+      ],
+      "destination_shape": [
+        2,
+        3
+      ],
+      "order": 1,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 6
+    },
+    {
+      "case": "noninteger_down",
+      "source_shape": [
+        7,
+        8
+      ],
+      "destination_shape": [
+        2,
+        3
+      ],
+      "order": 1,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "noninteger_down",
+      "source_shape": [
+        7,
+        8
+      ],
+      "destination_shape": [
+        2,
+        3
+      ],
+      "order": 1,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 6
+    },
+    {
+      "case": "noninteger_down",
+      "source_shape": [
+        7,
+        8
+      ],
+      "destination_shape": [
+        2,
+        3
+      ],
+      "order": 1,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 6
+    },
+    {
+      "case": "noninteger_down",
+      "source_shape": [
+        7,
+        8
+      ],
+      "destination_shape": [
+        2,
+        3
+      ],
+      "order": 1,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 6
+    },
+    {
+      "case": "noninteger_down",
+      "source_shape": [
+        7,
+        8
+      ],
+      "destination_shape": [
+        2,
+        3
+      ],
+      "order": 1,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "noninteger_down",
+      "source_shape": [
+        7,
+        8
+      ],
+      "destination_shape": [
+        2,
+        3
+      ],
+      "order": 1,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 2
+    },
+    {
+      "case": "noninteger_down",
+      "source_shape": [
+        7,
+        8
+      ],
+      "destination_shape": [
+        2,
+        3
+      ],
+      "order": 3,
+      "mask": "all_valid",
+      "oracle_disagreements": 0,
+      "expected_valid": 6
+    },
+    {
+      "case": "noninteger_down",
+      "source_shape": [
+        7,
+        8
+      ],
+      "destination_shape": [
+        2,
+        3
+      ],
+      "order": 3,
+      "mask": "all_invalid",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "noninteger_down",
+      "source_shape": [
+        7,
+        8
+      ],
+      "destination_shape": [
+        2,
+        3
+      ],
+      "order": 3,
+      "mask": "center_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 4
+    },
+    {
+      "case": "noninteger_down",
+      "source_shape": [
+        7,
+        8
+      ],
+      "destination_shape": [
+        2,
+        3
+      ],
+      "order": 3,
+      "mask": "corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 5
+    },
+    {
+      "case": "noninteger_down",
+      "source_shape": [
+        7,
+        8
+      ],
+      "destination_shape": [
+        2,
+        3
+      ],
+      "order": 3,
+      "mask": "opposite_corner_hole",
+      "oracle_disagreements": 0,
+      "expected_valid": 5
+    },
+    {
+      "case": "noninteger_down",
+      "source_shape": [
+        7,
+        8
+      ],
+      "destination_shape": [
+        2,
+        3
+      ],
+      "order": 3,
+      "mask": "checkerboard",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    },
+    {
+      "case": "noninteger_down",
+      "source_shape": [
+        7,
+        8
+      ],
+      "destination_shape": [
+        2,
+        3
+      ],
+      "order": 3,
+      "mask": "invalid_border",
+      "oracle_disagreements": 0,
+      "expected_valid": 0
+    }
+  ],
+  "oracle_disagreements": 0,
+  "false_accepts": 0,
+  "false_rejects": 0,
+  "fixture_count": 154
+}

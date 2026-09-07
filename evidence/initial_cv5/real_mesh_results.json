@@ -1,0 +1,463 @@
+{
+  "upstream_commit": "d8c5f488a105286c548c99c5f7c7ad9f29e3ed14",
+  "baseline_sha256": "a804fd1886526bbfd22e0169fce820eedbca236f3af41a7be2577298737c5300",
+  "patched_sha256": "c8d84a35a2aaa5e015044ed3a2b8316421af973df3488a6a0c71a328109c52c9",
+  "environment": {
+    "python": "3.14.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "numpy": "2.5.3",
+    "opencv": "5.0.0",
+    "opencv_threads": 10
+  },
+  "oracle": "Absolute separable OpenCV source-impulse weights; invalid support >1e-12",
+  "benchmark": "One warmup then three complete function calls, same process/input/order; median and range in seconds, CPU only",
+  "cases": [
+    {
+      "segment": "20251028220042-auto_grown_20251028220042762",
+      "stored_shape": [
+        93,
+        95
+      ],
+      "output_shape": [
+        1860,
+        1900
+      ],
+      "scale": [
+        0.05000000074505806,
+        0.05000000074505806
+      ],
+      "order": 0,
+      "before": {
+        "accepted": 2308800,
+        "accepted_with_invalid_source_support": 0,
+        "rejected_without_invalid_source_support": 0,
+        "accepted_outside_source_bbox_plus_one": 0
+      },
+      "after": {
+        "accepted": 2308800,
+        "accepted_with_invalid_source_support": 0,
+        "rejected_without_invalid_source_support": 0,
+        "accepted_outside_source_bbox_plus_one": 0
+      },
+      "common_accepted_coordinates_bit_exact": true,
+      "timing_before_seconds": {
+        "median": 0.006584417002159171,
+        "min": 0.006233250009245239,
+        "max": 0.011452416001702659,
+        "samples": [
+          0.011452416001702659,
+          0.006584417002159171,
+          0.006233250009245239
+        ]
+      },
+      "timing_after_seconds": {
+        "median": 0.006448415995691903,
+        "min": 0.006380542006809264,
+        "max": 0.012009666999801993,
+        "samples": [
+          0.012009666999801993,
+          0.006380542006809264,
+          0.006448415995691903
+        ]
+      }
+    },
+    {
+      "segment": "20251028220042-auto_grown_20251028220042762",
+      "stored_shape": [
+        93,
+        95
+      ],
+      "output_shape": [
+        1860,
+        1900
+      ],
+      "scale": [
+        0.05000000074505806,
+        0.05000000074505806
+      ],
+      "order": 1,
+      "before": {
+        "accepted": 2248400,
+        "accepted_with_invalid_source_support": 29900,
+        "rejected_without_invalid_source_support": 29900,
+        "accepted_outside_source_bbox_plus_one": 27827
+      },
+      "after": {
+        "accepted": 2248400,
+        "accepted_with_invalid_source_support": 0,
+        "rejected_without_invalid_source_support": 0,
+        "accepted_outside_source_bbox_plus_one": 0
+      },
+      "common_accepted_coordinates_bit_exact": true,
+      "timing_before_seconds": {
+        "median": 0.004923041997244582,
+        "min": 0.004599709005560726,
+        "max": 0.009648000006563962,
+        "samples": [
+          0.009648000006563962,
+          0.004923041997244582,
+          0.004599709005560726
+        ]
+      },
+      "timing_after_seconds": {
+        "median": 0.004799458998604678,
+        "min": 0.0044363750057527795,
+        "max": 0.009987249999539927,
+        "samples": [
+          0.009987249999539927,
+          0.004799458998604678,
+          0.0044363750057527795
+        ]
+      }
+    },
+    {
+      "segment": "20251028220042-auto_grown_20251028220042762",
+      "stored_shape": [
+        93,
+        95
+      ],
+      "output_shape": [
+        1860,
+        1900
+      ],
+      "scale": [
+        0.05000000074505806,
+        0.05000000074505806
+      ],
+      "order": 3,
+      "before": {
+        "accepted": 2130000,
+        "accepted_with_invalid_source_support": 29100,
+        "rejected_without_invalid_source_support": 29100,
+        "accepted_outside_source_bbox_plus_one": 9592
+      },
+      "after": {
+        "accepted": 2130000,
+        "accepted_with_invalid_source_support": 0,
+        "rejected_without_invalid_source_support": 0,
+        "accepted_outside_source_bbox_plus_one": 0
+      },
+      "common_accepted_coordinates_bit_exact": true,
+      "timing_before_seconds": {
+        "median": 0.005765084002632648,
+        "min": 0.005514208009117283,
+        "max": 0.006468125007813796,
+        "samples": [
+          0.006468125007813796,
+          0.005765084002632648,
+          0.005514208009117283
+        ]
+      },
+      "timing_after_seconds": {
+        "median": 0.006707292006467469,
+        "min": 0.006330958000035025,
+        "max": 0.006982834005611949,
+        "samples": [
+          0.006330958000035025,
+          0.006982834005611949,
+          0.006707292006467469
+        ]
+      }
+    },
+    {
+      "segment": "20251028220955-auto_grown_20251028220955262",
+      "stored_shape": [
+        90,
+        84
+      ],
+      "output_shape": [
+        1800,
+        1680
+      ],
+      "scale": [
+        0.05000000074505806,
+        0.05000000074505806
+      ],
+      "order": 0,
+      "before": {
+        "accepted": 2240000,
+        "accepted_with_invalid_source_support": 0,
+        "rejected_without_invalid_source_support": 0,
+        "accepted_outside_source_bbox_plus_one": 0
+      },
+      "after": {
+        "accepted": 2240000,
+        "accepted_with_invalid_source_support": 0,
+        "rejected_without_invalid_source_support": 0,
+        "accepted_outside_source_bbox_plus_one": 0
+      },
+      "common_accepted_coordinates_bit_exact": true,
+      "timing_before_seconds": {
+        "median": 0.005047790997195989,
+        "min": 0.00492908300657291,
+        "max": 0.005068375001428649,
+        "samples": [
+          0.005068375001428649,
+          0.00492908300657291,
+          0.005047790997195989
+        ]
+      },
+      "timing_after_seconds": {
+        "median": 0.00505150000390131,
+        "min": 0.005043665994890034,
+        "max": 0.0050889169942820445,
+        "samples": [
+          0.0050889169942820445,
+          0.005043665994890034,
+          0.00505150000390131
+        ]
+      }
+    },
+    {
+      "segment": "20251028220955-auto_grown_20251028220955262",
+      "stored_shape": [
+        90,
+        84
+      ],
+      "output_shape": [
+        1800,
+        1680
+      ],
+      "scale": [
+        0.05000000074505806,
+        0.05000000074505806
+      ],
+      "order": 1,
+      "before": {
+        "accepted": 2180400,
+        "accepted_with_invalid_source_support": 29500,
+        "rejected_without_invalid_source_support": 29500,
+        "accepted_outside_source_bbox_plus_one": 28184
+      },
+      "after": {
+        "accepted": 2180400,
+        "accepted_with_invalid_source_support": 0,
+        "rejected_without_invalid_source_support": 0,
+        "accepted_outside_source_bbox_plus_one": 0
+      },
+      "common_accepted_coordinates_bit_exact": true,
+      "timing_before_seconds": {
+        "median": 0.0035897089983336627,
+        "min": 0.0035624169977381825,
+        "max": 0.0036237089952919632,
+        "samples": [
+          0.0035897089983336627,
+          0.0036237089952919632,
+          0.0035624169977381825
+        ]
+      },
+      "timing_after_seconds": {
+        "median": 0.003798625009949319,
+        "min": 0.0036880840052617714,
+        "max": 0.0038052500021876767,
+        "samples": [
+          0.0038052500021876767,
+          0.003798625009949319,
+          0.0036880840052617714
+        ]
+      }
+    },
+    {
+      "segment": "20251028220955-auto_grown_20251028220955262",
+      "stored_shape": [
+        90,
+        84
+      ],
+      "output_shape": [
+        1800,
+        1680
+      ],
+      "scale": [
+        0.05000000074505806,
+        0.05000000074505806
+      ],
+      "order": 3,
+      "before": {
+        "accepted": 2063600,
+        "accepted_with_invalid_source_support": 28700,
+        "rejected_without_invalid_source_support": 28700,
+        "accepted_outside_source_bbox_plus_one": 7011
+      },
+      "after": {
+        "accepted": 2063600,
+        "accepted_with_invalid_source_support": 0,
+        "rejected_without_invalid_source_support": 0,
+        "accepted_outside_source_bbox_plus_one": 0
+      },
+      "common_accepted_coordinates_bit_exact": true,
+      "timing_before_seconds": {
+        "median": 0.004636665995349176,
+        "min": 0.004429499997058883,
+        "max": 0.004684832994826138,
+        "samples": [
+          0.004684832994826138,
+          0.004429499997058883,
+          0.004636665995349176
+        ]
+      },
+      "timing_after_seconds": {
+        "median": 0.005516874996828847,
+        "min": 0.005364458993426524,
+        "max": 0.005609958010609262,
+        "samples": [
+          0.005516874996828847,
+          0.005364458993426524,
+          0.005609958010609262
+        ]
+      }
+    },
+    {
+      "segment": "20251029010146-auto_grown_20251029010146642",
+      "stored_shape": [
+        42,
+        42
+      ],
+      "output_shape": [
+        840,
+        840
+      ],
+      "scale": [
+        0.05000000074505806,
+        0.05000000074505806
+      ],
+      "order": 0,
+      "before": {
+        "accepted": 577600,
+        "accepted_with_invalid_source_support": 0,
+        "rejected_without_invalid_source_support": 0,
+        "accepted_outside_source_bbox_plus_one": 0
+      },
+      "after": {
+        "accepted": 577600,
+        "accepted_with_invalid_source_support": 0,
+        "rejected_without_invalid_source_support": 0,
+        "accepted_outside_source_bbox_plus_one": 0
+      },
+      "common_accepted_coordinates_bit_exact": true,
+      "timing_before_seconds": {
+        "median": 0.0011699169990606606,
+        "min": 0.0011673330009216443,
+        "max": 0.0011746249947464094,
+        "samples": [
+          0.0011673330009216443,
+          0.0011699169990606606,
+          0.0011746249947464094
+        ]
+      },
+      "timing_after_seconds": {
+        "median": 0.0012367079907562584,
+        "min": 0.0011638340074568987,
+        "max": 0.0016064579976955429,
+        "samples": [
+          0.0016064579976955429,
+          0.0012367079907562584,
+          0.0011638340074568987
+        ]
+      }
+    },
+    {
+      "segment": "20251029010146-auto_grown_20251029010146642",
+      "stored_shape": [
+        42,
+        42
+      ],
+      "output_shape": [
+        840,
+        840
+      ],
+      "scale": [
+        0.05000000074505806,
+        0.05000000074505806
+      ],
+      "order": 1,
+      "before": {
+        "accepted": 547600,
+        "accepted_with_invalid_source_support": 14700,
+        "rejected_without_invalid_source_support": 14700,
+        "accepted_outside_source_bbox_plus_one": 14453
+      },
+      "after": {
+        "accepted": 547600,
+        "accepted_with_invalid_source_support": 0,
+        "rejected_without_invalid_source_support": 0,
+        "accepted_outside_source_bbox_plus_one": 0
+      },
+      "common_accepted_coordinates_bit_exact": true,
+      "timing_before_seconds": {
+        "median": 0.0008547080069547519,
+        "min": 0.0008427080028923228,
+        "max": 0.0008817079942673445,
+        "samples": [
+          0.0008817079942673445,
+          0.0008427080028923228,
+          0.0008547080069547519
+        ]
+      },
+      "timing_after_seconds": {
+        "median": 0.0009077499998966232,
+        "min": 0.0008745420054765418,
+        "max": 0.001084124989574775,
+        "samples": [
+          0.001084124989574775,
+          0.0008745420054765418,
+          0.0009077499998966232
+        ]
+      }
+    },
+    {
+      "segment": "20251029010146-auto_grown_20251029010146642",
+      "stored_shape": [
+        42,
+        42
+      ],
+      "output_shape": [
+        840,
+        840
+      ],
+      "scale": [
+        0.05000000074505806,
+        0.05000000074505806
+      ],
+      "order": 3,
+      "before": {
+        "accepted": 490000,
+        "accepted_with_invalid_source_support": 13900,
+        "rejected_without_invalid_source_support": 13900,
+        "accepted_outside_source_bbox_plus_one": 7797
+      },
+      "after": {
+        "accepted": 490000,
+        "accepted_with_invalid_source_support": 0,
+        "rejected_without_invalid_source_support": 0,
+        "accepted_outside_source_bbox_plus_one": 0
+      },
+      "common_accepted_coordinates_bit_exact": true,
+      "timing_before_seconds": {
+        "median": 0.001042374991811812,
+        "min": 0.0010365420021116734,
+        "max": 0.0010626250004861504,
+        "samples": [
+          0.0010365420021116734,
+          0.0010626250004861504,
+          0.001042374991811812
+        ]
+      },
+      "timing_after_seconds": {
+        "median": 0.0012605829979293048,
+        "min": 0.0012564170028781518,
+        "max": 0.0014004999975441024,
+        "samples": [
+          0.0014004999975441024,
+          0.0012605829979293048,
+          0.0012564170028781518
+        ]
+      }
+    }
+  ],
+  "limits": [
+    "Three patches of one scroll",
+    "No CT volume or ink model evaluation",
+    "Coordinate units only; no physical-unit conversion",
+    "No theorem of all-size/backend correctness; supplemental edge tests required"
+  ]
+}

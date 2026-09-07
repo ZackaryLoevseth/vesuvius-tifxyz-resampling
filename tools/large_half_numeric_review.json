@@ -1,0 +1,26 @@
+{
+  "source_sha256": "2619428c73ff801823cd2eb6433084309e45564fdcf3a7d3d50f932804a466c6",
+  "cv2": "5.0.0",
+  "case": "exact_half_AREA_shortcut_large_skinny",
+  "source_shape": [
+    2,
+    8388610
+  ],
+  "output_shape": [
+    1,
+    4194305
+  ],
+  "invalid_input": [
+    0,
+    8388609
+  ],
+  "output_pixel": [
+    0,
+    4194304
+  ],
+  "source_position_exact": 8388608.5,
+  "source_position_float32": 8388608.0,
+  "invalid_input_resize_weight": 0.25,
+  "candidate_accepts": true,
+  "unsafe_accepted_pixels": 1
+}

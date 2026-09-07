@@ -1,0 +1,62 @@
+Expected failure: regression run against unmodified upstream function
+.....F
+=================================== FAILURES ===================================
+_ test_each_invalid_vertex_matches_opencv_support[source_shape1-output_shape1-1] _
+
+source_shape = (1, 4), output_shape = (5, 9), order = 1
+
+    @pytest.mark.parametrize("order", [0, 1, 3, 2])
+    @pytest.mark.parametrize(
+        "source_shape,output_shape",
+        [
+            ((1, 1), (3, 5)),
+            ((1, 4), (5, 9)),
+            ((4, 1), (9, 5)),
+            ((2, 2), (11, 22)),
+            ((3, 4), (3, 4)),
+            ((3, 4), (6, 12)),
+            ((7, 9), (11, 22)),
+            ((7, 9), (3, 4)),
+        ],
+    )
+    def test_each_invalid_vertex_matches_opencv_support(
+        source_shape, output_shape, order
+    ):
+        # Moving the hole across every vertex exercises all corners, edges, and
+        # interior taps. In particular, border replication must clamp each tap.
+        for row, col in np.ndindex(source_shape):
+            mask = np.ones(source_shape, dtype=bool)
+            mask[row, col] = False
+            coordinates, result = _resize(mask, output_shape, order)
+            expected_valid = _impulse_validity(mask, output_shape, order)
+>           np.testing.assert_array_equal(
+                result[3], expected_valid, err_msg=f"invalid vertex {(row, col)}"
+            )
+E           AssertionError: 
+E           Arrays are not equal
+E           invalid vertex (0, 1)
+E           Mismatched elements: 10 / 45 (22.2%)
+E           First 5 mismatches are at indices:
+E            [0, 0]: False (ACTUAL), True (DESIRED)
+E            [0, 5]: True (ACTUAL), False (DESIRED)
+E            [1, 0]: False (ACTUAL), True (DESIRED)
+E            [1, 5]: True (ACTUAL), False (DESIRED)
+E            [2, 0]: False (ACTUAL), True (DESIRED)
+E            ACTUAL: array([[False, False, False, False, False,  True,  True,  True,  True],
+E                  [False, False, False, False, False,  True,  True,  True,  True],
+E                  [False, False, False, False, False,  True,  True,  True,  True],...
+E            DESIRED: array([[ True, False, False, False, False, False,  True,  True,  True],
+E                  [ True, False, False, False, False, False,  True,  True,  True],
+E                  [ True, False, False, False, False, False,  True,  True,  True],...
+
+source/vesuvius/tests/tifxyz/test_upsampling.py:73: AssertionError
+=============================== warnings summary ===============================
+.venv/lib/python3.14/site-packages/_pytest/config/__init__.py:1345
+  <work-package>/.venv/lib/python3.14/site-packages/_pytest/config/__init__.py:1345: PytestAssertRewriteWarning: Module already imported so cannot be rewritten; zarr
+    self._mark_plugins_for_rewrite(hook, disable_autoload)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED source/vesuvius/tests/tifxyz/test_upsampling.py::test_each_invalid_vertex_matches_opencv_support[source_shape1-output_shape1-1]
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 5 passed, 1 warning in 0.05s

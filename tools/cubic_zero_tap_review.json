@@ -1,0 +1,15 @@
+{
+  "source_sha256": "2619428c73ff801823cd2eb6433084309e45564fdcf3a7d3d50f932804a466c6",
+  "cv2": "5.0.0",
+  "source_shape": [
+    1,
+    4
+  ],
+  "output_shape": [
+    1,
+    1000001
+  ],
+  "case": "noninteger_cubic_rounded_zero_taps",
+  "false_rejects_across_four_single_invalid_masks": 0,
+  "examples": []
+}

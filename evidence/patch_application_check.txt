@@ -1,0 +1,1 @@
+PASS: patch applies to pristine pinned target module and reproduces both final source and regression test files byte-for-byte.

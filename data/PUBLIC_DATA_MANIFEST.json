@@ -1,0 +1,694 @@
+{
+  "generated_at_utc": "2026-09-07T23:08:27.953154+00:00",
+  "downloaded_bytes": 2680138,
+  "download_cap_bytes": 50000000,
+  "license": "CC BY-NC 4.0 per official AWS registry and ScrollPrize/open-data README; files downloaded for local research only; no new agreement acceptance or redistribution",
+  "files": [
+    {
+      "path": "provenance/metadata.min.json.original.gz",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/metadata.min.json",
+      "bytes": 58384,
+      "sha256": "8adfed1019ab2fa8a44475067c89e658ba2739e4ed151d2a79d4d70d869b4fb2",
+      "headers": {
+        "Content-Length": "58384",
+        "Content-Type": "application/json",
+        "Content-Encoding": "gzip",
+        "Last-Modified": "Mon, 07 Sep 2026 09:15:13 GMT",
+        "ETag": "\"3c8465493b327b0b9c356fc017dd5154\""
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "provenance/ScrollPrize_open-data_README.original.md",
+      "url": "https://raw.githubusercontent.com/ScrollPrize/open-data/main/README.md",
+      "bytes": 12909,
+      "sha256": "eed764cf45888768a1ebd68852c6b786b1f37babad87a91d23dcb5e12a5202c5",
+      "headers": {
+        "Content-Length": "12909",
+        "Content-Type": "text/plain; charset=utf-8",
+        "Content-Encoding": null,
+        "Last-Modified": null,
+        "ETag": "\"709c4ab51d4cc34d50a1ab2691b490bd89098fcd543caf8293fd63afa2adb207\""
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "provenance/AWS_registry.original.html",
+      "url": "https://registry.opendata.aws/vesuvius-challenge-herculaneum-scrolls/",
+      "bytes": 8957,
+      "sha256": "68d3715d68346d13468beb4cbeb8e15c42790f4b2cf8b17dbf76ce49754405f6",
+      "headers": {
+        "Content-Length": "8957",
+        "Content-Type": "text/html",
+        "Content-Encoding": null,
+        "Last-Modified": "Thu, 03 Sep 2026 23:39:12 GMT",
+        "ETag": "\"756b31c4be7fac4b1a53a529e884b2bb\""
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "20251029010146-auto_grown_20251029010146642/s3_listing.original.xml",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/?list-type=2&prefix=PHerc0800%2Fsegments%2F20251029010146-auto_grown_20251029010146642%2Fmesh%2Fintermediate%2F",
+      "bytes": 4840,
+      "sha256": "db42bd0a02d5c9413ba4d45e9382300f51b2bbf5609893f571902f2bc504e22b",
+      "headers": {
+        "Content-Length": null,
+        "Content-Type": "application/xml",
+        "Content-Encoding": null,
+        "Last-Modified": null,
+        "ETag": null
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "20251029010146-auto_grown_20251029010146642/tifxyz_original/meta.json",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/intermediate/tifxyz_original/meta.json",
+      "bytes": 1213,
+      "sha256": "e65b15f00aa1244a75c6e0dc004580286b40e999cb647bcd0580a06f25a86c03",
+      "headers": {
+        "Content-Length": "1213",
+        "Content-Type": "application/json",
+        "Content-Encoding": null,
+        "Last-Modified": "Wed, 08 Jul 2026 14:16:54 GMT",
+        "ETag": "\"2005fc869dc09fe74c630ab7f5a969b1\""
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "20251029010146-auto_grown_20251029010146642/tifxyz_original/x.tif",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/intermediate/tifxyz_original/x.tif",
+      "bytes": 18812,
+      "sha256": "ae146dd6355919fe8f2f7f427980926ffac1faf407d2b5914491808235df4d24",
+      "headers": {
+        "Content-Length": "18812",
+        "Content-Type": "image/tiff",
+        "Content-Encoding": null,
+        "Last-Modified": "Wed, 08 Jul 2026 14:16:55 GMT",
+        "ETag": "\"d4bab412558ff5ef15233e6dc3618dd7\""
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "20251029010146-auto_grown_20251029010146642/tifxyz_original/y.tif",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/intermediate/tifxyz_original/y.tif",
+      "bytes": 18430,
+      "sha256": "34362f60692860d40cb2546c974f04617f7ae59a2cc133bfefab0ccb55ad39f7",
+      "headers": {
+        "Content-Length": "18430",
+        "Content-Type": "image/tiff",
+        "Content-Encoding": null,
+        "Last-Modified": "Wed, 08 Jul 2026 14:16:56 GMT",
+        "ETag": "\"cb1f9a70698b3a9a5b019d0cb984d32c\""
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "20251029010146-auto_grown_20251029010146642/tifxyz_original/z.tif",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/intermediate/tifxyz_original/z.tif",
+      "bytes": 18004,
+      "sha256": "850c19ec82a2dc153a603ea0f540b14df466c3c9e4723e7f64b3a7bc9947d86e",
+      "headers": {
+        "Content-Length": "18004",
+        "Content-Type": "image/tiff",
+        "Content-Encoding": null,
+        "Last-Modified": "Wed, 08 Jul 2026 14:16:58 GMT",
+        "ETag": "\"b250e1ac3a0f1f597db23c7d939266b0\""
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "20251029010146-auto_grown_20251029010146642/20251029010146-auto_grown_20251029010146642_original.obj",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/intermediate/20251029010146-auto_grown_20251029010146642_original.obj",
+      "bytes": 246972,
+      "sha256": "6b38f363fea46fb979f6d8b66ad6f36a882a701137d0637c68d233352ad6c19f",
+      "headers": {
+        "Content-Length": "246972",
+        "Content-Type": "application/x-tgif",
+        "Content-Encoding": null,
+        "Last-Modified": "Wed, 08 Jul 2026 14:16:54 GMT",
+        "ETag": "\"b01e6b69076b0738e253e905ad238ad8\""
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "20251028220955-auto_grown_20251028220955262/s3_listing.original.xml",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/?list-type=2&prefix=PHerc0800%2Fsegments%2F20251028220955-auto_grown_20251028220955262%2Fmesh%2Fintermediate%2F",
+      "bytes": 4845,
+      "sha256": "e49d0b499348bee9bbcd5bd81e5a51cc779bc6adc43cd276ef59c3788eb6c8f4",
+      "headers": {
+        "Content-Length": null,
+        "Content-Type": "application/xml",
+        "Content-Encoding": null,
+        "Last-Modified": null,
+        "ETag": null
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "20251028220955-auto_grown_20251028220955262/tifxyz_original/meta.json",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251028220955-auto_grown_20251028220955262/mesh/intermediate/tifxyz_original/meta.json",
+      "bytes": 645,
+      "sha256": "9e3eb85c44adf399542f123af977494a65647a36a1aa328be373d07f5e87e872",
+      "headers": {
+        "Content-Length": "645",
+        "Content-Type": "application/json",
+        "Content-Encoding": null,
+        "Last-Modified": "Wed, 08 Jul 2026 14:16:53 GMT",
+        "ETag": "\"455575e7f7ecb25251eb8f94693cc96f\""
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "20251028220955-auto_grown_20251028220955262/tifxyz_original/x.tif",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251028220955-auto_grown_20251028220955262/mesh/intermediate/tifxyz_original/x.tif",
+      "bytes": 32554,
+      "sha256": "0db0f4bb51922af0b69259483a5201b0849ed29b6abca09e50fced410b439976",
+      "headers": {
+        "Content-Length": "32554",
+        "Content-Type": "image/tiff",
+        "Content-Encoding": null,
+        "Last-Modified": "Wed, 08 Jul 2026 14:16:54 GMT",
+        "ETag": "\"368eeeb7b31556555d9c40f294b9c5df\""
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "20251028220955-auto_grown_20251028220955262/tifxyz_original/y.tif",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251028220955-auto_grown_20251028220955262/mesh/intermediate/tifxyz_original/y.tif",
+      "bytes": 31354,
+      "sha256": "d5501e890e89911c735cac971c663cf8a8b53fae60819bcf873cc11eef4ee9d5",
+      "headers": {
+        "Content-Length": "31354",
+        "Content-Type": "image/tiff",
+        "Content-Encoding": null,
+        "Last-Modified": "Wed, 08 Jul 2026 14:16:55 GMT",
+        "ETag": "\"36fe53b9d8bc0139293524729b713735\""
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "20251028220955-auto_grown_20251028220955262/tifxyz_original/z.tif",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251028220955-auto_grown_20251028220955262/mesh/intermediate/tifxyz_original/z.tif",
+      "bytes": 28822,
+      "sha256": "e8d242fc489e5aeceec87e3fc467df94d0243f581bc90905e694ff1b05831b4b",
+      "headers": {
+        "Content-Length": "28822",
+        "Content-Type": "image/tiff",
+        "Content-Encoding": null,
+        "Last-Modified": "Wed, 08 Jul 2026 14:16:56 GMT",
+        "ETag": "\"3e241652ffe0e9d544eb41ad9bbbb2ab\""
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "20251028220955-auto_grown_20251028220955262/20251028220955-auto_grown_20251028220955262_original.obj",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251028220955-auto_grown_20251028220955262/mesh/intermediate/20251028220955-auto_grown_20251028220955262_original.obj",
+      "bytes": 1030517,
+      "sha256": "7fe8976662faed93fbb8cc100f0e7caad2a2d4d0d1e752703e0da0b17184a7e5",
+      "headers": {
+        "Content-Length": "1030517",
+        "Content-Type": "application/x-tgif",
+        "Content-Encoding": null,
+        "Last-Modified": "Wed, 08 Jul 2026 14:16:53 GMT",
+        "ETag": "\"d812523d59abc1f8430fbd90d58bc419\""
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "20251028220042-auto_grown_20251028220042762/s3_listing.original.xml",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/?list-type=2&prefix=PHerc0800%2Fsegments%2F20251028220042-auto_grown_20251028220042762%2Fmesh%2Fintermediate%2F",
+      "bytes": 4845,
+      "sha256": "4f86414f0df847c94e4e0761c38afc2c1a6d888070d67c3faf70f513e3c5d1b7",
+      "headers": {
+        "Content-Length": null,
+        "Content-Type": "application/xml",
+        "Content-Encoding": null,
+        "Last-Modified": null,
+        "ETag": null
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "20251028220042-auto_grown_20251028220042762/tifxyz_original/meta.json",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251028220042-auto_grown_20251028220042762/mesh/intermediate/tifxyz_original/meta.json",
+      "bytes": 654,
+      "sha256": "394eb8ef7bb13b933bbbf82321e4feb5c429e1d077cd4faf11d695f085ec4e60",
+      "headers": {
+        "Content-Length": "654",
+        "Content-Type": "application/json",
+        "Content-Encoding": null,
+        "Last-Modified": "Wed, 08 Jul 2026 14:16:51 GMT",
+        "ETag": "\"7f58aefd517e5b4e765ac01f3c419374\""
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "20251028220042-auto_grown_20251028220042762/tifxyz_original/x.tif",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251028220042-auto_grown_20251028220042762/mesh/intermediate/tifxyz_original/x.tif",
+      "bytes": 33010,
+      "sha256": "81442d4a860bd4baa029021569f1680576fec01157a36a0e434071bf66647acb",
+      "headers": {
+        "Content-Length": "33010",
+        "Content-Type": "image/tiff",
+        "Content-Encoding": null,
+        "Last-Modified": "Wed, 08 Jul 2026 14:16:52 GMT",
+        "ETag": "\"f251ed76498b9480cc8eacfe230771b5\""
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "20251028220042-auto_grown_20251028220042762/tifxyz_original/y.tif",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251028220042-auto_grown_20251028220042762/mesh/intermediate/tifxyz_original/y.tif",
+      "bytes": 31690,
+      "sha256": "afd58dcce07e0a45334ccf36e735d31f498b02b1a5d57c88dca4b6b3dd09cb47",
+      "headers": {
+        "Content-Length": "31690",
+        "Content-Type": "image/tiff",
+        "Content-Encoding": null,
+        "Last-Modified": "Wed, 08 Jul 2026 14:16:53 GMT",
+        "ETag": "\"e59fa554dda798ece2615dbdfd53fe16\""
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "20251028220042-auto_grown_20251028220042762/tifxyz_original/z.tif",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251028220042-auto_grown_20251028220042762/mesh/intermediate/tifxyz_original/z.tif",
+      "bytes": 28870,
+      "sha256": "c58511f4b6133d255090ffa430c1b29af109bc3ae0b5aa67b3920b22647d8818",
+      "headers": {
+        "Content-Length": "28870",
+        "Content-Type": "image/tiff",
+        "Content-Encoding": null,
+        "Last-Modified": "Wed, 08 Jul 2026 14:16:54 GMT",
+        "ETag": "\"a1c7af5133181011af91ad97ca1f536d\""
+      },
+      "access": "anonymous HTTPS; no credentials"
+    },
+    {
+      "path": "20251028220042-auto_grown_20251028220042762/20251028220042-auto_grown_20251028220042762_original.obj",
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251028220042-auto_grown_20251028220042762/mesh/intermediate/20251028220042-auto_grown_20251028220042762_original.obj",
+      "bytes": 1063811,
+      "sha256": "dd649b579b7884368aaa4f87f6845c4707ef949e2858d0e6966abad3a02e8a8c",
+      "headers": {
+        "Content-Length": "1063811",
+        "Content-Type": "application/x-tgif",
+        "Content-Encoding": null,
+        "Last-Modified": "Wed, 08 Jul 2026 14:16:52 GMT",
+        "ETag": "\"6a1857e6490b7516bae0d7688d5929ee\""
+      },
+      "access": "anonymous HTTPS; no credentials"
+    }
+  ],
+  "samples": [
+    {
+      "segment": "20251029010146-auto_grown_20251029010146642",
+      "sample": "PHerc0800",
+      "source_prefix": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/intermediate/tifxyz_original/",
+      "geometry_bytes": 56459,
+      "obj_bytes": 246972,
+      "array_shape": [
+        42,
+        42
+      ],
+      "dtype": "float32",
+      "scale": [
+        0.05000000074505806,
+        0.05000000074505806
+      ],
+      "valid_vertices": 1444,
+      "all_negative_one_vertices": 320,
+      "nonfinite_entries": 0,
+      "partial_negative_one_vertices": 0,
+      "computed_bbox": [
+        [
+          3085.297119140625,
+          5890.88525390625,
+          11598.3212890625
+        ],
+        [
+          3718.211669921875,
+          6623.1015625,
+          12516.8623046875
+        ]
+      ],
+      "bbox_max_abs_difference": 0.0,
+      "registry_entry": {
+        "suffix": "auto_grown_20251029010146642",
+        "long_id": "20251029010146-auto_grown_20251029010146642",
+        "data": [
+          {
+            "type": "tifxyz",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/intermediate/tifxyz_original/",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "obj",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/intermediate/20251029010146-auto_grown_20251029010146642_original.obj",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "obj-flattened",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/intermediate/20251029010146-auto_grown_20251029010146642_flattened.obj",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "obj-normalized",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/intermediate/20251029010146-auto_grown_20251029010146642_normalized.obj",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tifxyz-normalized",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/intermediate/tifxyz_normalized/",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tifxyz-transformed",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/20251029010146-on-20250521135224-8.64um.tifxyz/",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "layers-zarr",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251029010146-auto_grown_20251029010146642/surface-volumes/8.64um-1.2m-116keV-volume-20250521135224.zarr/",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "segment": "20251028220955-auto_grown_20251028220955262",
+      "sample": "PHerc0800",
+      "source_prefix": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251028220955-auto_grown_20251028220955262/mesh/intermediate/tifxyz_original/",
+      "geometry_bytes": 93375,
+      "obj_bytes": 1030517,
+      "array_shape": [
+        90,
+        84
+      ],
+      "dtype": "float32",
+      "scale": [
+        0.05000000074505806,
+        0.05000000074505806
+      ],
+      "valid_vertices": 5600,
+      "all_negative_one_vertices": 1960,
+      "nonfinite_entries": 0,
+      "partial_negative_one_vertices": 0,
+      "computed_bbox": [
+        [
+          3075.578857421875,
+          5374.171875,
+          10970.2685546875
+        ],
+        [
+          4332.32861328125,
+          6921.359375,
+          12922.4404296875
+        ]
+      ],
+      "bbox_max_abs_difference": 0.0,
+      "registry_entry": {
+        "suffix": "auto_grown_20251028220955262",
+        "long_id": "20251028220955-auto_grown_20251028220955262",
+        "data": [
+          {
+            "type": "tifxyz",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251028220955-auto_grown_20251028220955262/mesh/intermediate/tifxyz_original/",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "obj",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251028220955-auto_grown_20251028220955262/mesh/intermediate/20251028220955-auto_grown_20251028220955262_original.obj",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "obj-flattened",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251028220955-auto_grown_20251028220955262/mesh/intermediate/20251028220955-auto_grown_20251028220955262_flattened.obj",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "obj-normalized",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251028220955-auto_grown_20251028220955262/mesh/intermediate/20251028220955-auto_grown_20251028220955262_normalized.obj",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tifxyz-normalized",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251028220955-auto_grown_20251028220955262/mesh/intermediate/tifxyz_normalized/",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tifxyz-transformed",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251028220955-auto_grown_20251028220955262/mesh/20251028220955-on-20250521135224-8.64um.tifxyz/",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "layers-zarr",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251028220955-auto_grown_20251028220955262/surface-volumes/8.64um-1.2m-116keV-volume-20250521135224.zarr/",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "segment": "20251028220042-auto_grown_20251028220042762",
+      "sample": "PHerc0800",
+      "source_prefix": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251028220042-auto_grown_20251028220042762/mesh/intermediate/tifxyz_original/",
+      "geometry_bytes": 94224,
+      "obj_bytes": 1063811,
+      "array_shape": [
+        93,
+        95
+      ],
+      "dtype": "float32",
+      "scale": [
+        0.05000000074505806,
+        0.05000000074505806
+      ],
+      "valid_vertices": 5772,
+      "all_negative_one_vertices": 3063,
+      "nonfinite_entries": 0,
+      "partial_negative_one_vertices": 0,
+      "computed_bbox": [
+        [
+          2953.123291015625,
+          5471.521484375,
+          11132.9638671875
+        ],
+        [
+          4298.40771484375,
+          6850.39306640625,
+          13054.068359375
+        ]
+      ],
+      "bbox_max_abs_difference": 0.0,
+      "registry_entry": {
+        "suffix": "auto_grown_20251028220042762",
+        "long_id": "20251028220042-auto_grown_20251028220042762",
+        "data": [
+          {
+            "type": "tifxyz",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251028220042-auto_grown_20251028220042762/mesh/intermediate/tifxyz_original/",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "obj",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251028220042-auto_grown_20251028220042762/mesh/intermediate/20251028220042-auto_grown_20251028220042762_original.obj",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "obj-flattened",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251028220042-auto_grown_20251028220042762/mesh/intermediate/20251028220042-auto_grown_20251028220042762_flattened.obj",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "obj-normalized",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251028220042-auto_grown_20251028220042762/mesh/intermediate/20251028220042-auto_grown_20251028220042762_normalized.obj",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tifxyz-normalized",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251028220042-auto_grown_20251028220042762/mesh/intermediate/tifxyz_normalized/",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tifxyz-transformed",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251028220042-auto_grown_20251028220042762/mesh/20251028220042-on-20250521135224-8.64um.tifxyz/",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "layers-zarr",
+            "origins": [
+              {
+                "path": "PHerc0800/segments/20251028220042-auto_grown_20251028220042762/surface-volumes/8.64um-1.2m-116keV-volume-20250521135224.zarr/",
+                "access_roots": [
+                  {
+                    "url": "s3://vesuvius-challenge-open-data"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

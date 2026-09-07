@@ -1,0 +1,274 @@
+diff --git a/vesuvius/src/vesuvius/tifxyz/upsampling.py b/vesuvius/src/vesuvius/tifxyz/upsampling.py
+index 32fdcf6..3c04ce3 100644
+--- a/vesuvius/src/vesuvius/tifxyz/upsampling.py
++++ b/vesuvius/src/vesuvius/tifxyz/upsampling.py
+@@ -262,6 +262,66 @@ def _check_bspline_validity(mask, qy, qx, h, w, order):
+     return valid
+ 
+ 
++def _resize_valid_mask(
++    mask: NDArray[np.bool_], output_shape: Tuple[int, int], order: int
++) -> NDArray[np.bool_]:
++    """Require valid input at every contributing OpenCV resize kernel tap.
++
++    Linear/cubic resize samples at half-pixel source coordinates, unlike
++    INTER_NEAREST. Resizing an eroded mask with nearest-neighbor interpolation
++    can therefore accept coordinates that include an invalid source vertex.
++    Check the separable kernel at the same source positions as cv2.resize,
++    clamping each tap to the border. At integer positions only the center tap
++    contributes; this also preserves the mask for an unchanged output size.
++    """
++    mask = np.asarray(mask, dtype=bool)
++    h, w = mask.shape
++    new_h, new_w = output_shape
++    if output_shape == mask.shape:
++        # resize copies identity transforms without a floating-point inverse map.
++        return mask.copy()
++    if order == 0:
++        return cv2.resize(
++            mask.astype(np.uint8), (new_w, new_h), interpolation=cv2.INTER_NEAREST
++        ).astype(bool)
++    if order != 3 and h == 2 * new_h and w == 2 * new_w:
++        # OpenCV redirects exactly 2x linear downsampling to its area kernel.
++        # Keep integer indexing even above float32's half-integer precision.
++        return (
++            mask[::2, ::2] & mask[1::2, ::2]
++            & mask[::2, 1::2] & mask[1::2, 1::2]
++        )
++
++    # OpenCV computes the inverse map in double precision, then casts to float
++    # before choosing the base index and interpolation coefficients.
++    rows = ((np.arange(new_h) + 0.5) * (1.0 / (new_h / h)) - 0.5).astype(np.float32)
++    cols = ((np.arange(new_w) + 0.5) * (1.0 / (new_w / w)) - 0.5).astype(np.float32)
++    row_base = np.floor(rows).astype(np.intp)
++    col_base = np.floor(cols).astype(np.intp)
++    row_fractional = rows != row_base
++    col_fractional = cols != col_base
++    offsets = (-1, 0, 1, 2) if order == 3 else (0, 1)
++
++    # Check horizontal and vertical support separately to avoid materializing
++    # all 4/16 input taps for every output point at once.
++    horizontal_valid = np.ones((h, new_w), dtype=bool)
++    for offset in offsets:
++        source_cols = np.clip(col_base + offset, 0, w - 1)
++        tap_valid = mask[:, source_cols]
++        if offset != 0:
++            tap_valid = tap_valid | ~col_fractional[None, :]
++        horizontal_valid &= tap_valid
++
++    valid = np.ones((new_h, new_w), dtype=bool)
++    for offset in offsets:
++        source_rows = np.clip(row_base + offset, 0, h - 1)
++        tap_valid = horizontal_valid[source_rows, :]
++        if offset != 0:
++            tap_valid = tap_valid | ~row_fractional[:, None]
++        valid &= tap_valid
++    return valid
++
++
+ def upsample_coordinates(
+     x: NDArray[np.float32],
+     y: NDArray[np.float32],
+@@ -310,34 +370,15 @@ def upsample_coordinates(
+     new_h = int(round(h * zoom_y))
+     new_w = int(round(w * zoom_x))
+ 
+-    # Map order to OpenCV interpolation flag and erode mask appropriately
+-    # Erosion ensures interpolation kernels never touch invalid pixels
++    # Keep coordinate interpolation unchanged; validate its actual input support.
+     if order == 0:
+         interp = cv2.INTER_NEAREST
+-        # Nearest neighbor uses 1 pixel - no erosion needed
+-        mask_eroded = mask
+     elif order == 1:
+         interp = cv2.INTER_LINEAR
+-        # Bilinear uses 2x2 kernel: pixels at (y,x), (y,x+1), (y+1,x), (y+1,x+1)
+-        # Erode with 2x2 kernel anchored at top-left to check exactly those 4 pixels
+-        erosion_kernel = np.ones((2, 2), dtype=np.uint8)
+-        mask_eroded = cv2.erode(
+-            mask.astype(np.uint8), erosion_kernel, anchor=(0, 0)
+-        ).astype(bool)
+     elif order == 3:
+         interp = cv2.INTER_CUBIC
+-        # Bicubic uses 4x4 kernel: pixels from (y-1,x-1) to (y+2,x+2)
+-        # Erode with 4x4 kernel anchored at (1,1) to check that neighborhood
+-        erosion_kernel = np.ones((4, 4), dtype=np.uint8)
+-        mask_eroded = cv2.erode(
+-            mask.astype(np.uint8), erosion_kernel, anchor=(1, 1)
+-        ).astype(bool)
+     else:
+         interp = cv2.INTER_LINEAR
+-        erosion_kernel = np.ones((2, 2), dtype=np.uint8)
+-        mask_eroded = cv2.erode(
+-            mask.astype(np.uint8), erosion_kernel, anchor=(0, 0)
+-        ).astype(bool)
+ 
+     # Use OpenCV resize - much faster than scipy.ndimage.zoom
+     # cv2.resize takes (width, height) not (height, width)
+@@ -345,11 +386,7 @@ def upsample_coordinates(
+     y_up = cv2.resize(y, (new_w, new_h), interpolation=interp)
+     z_up = cv2.resize(z, (new_w, new_h), interpolation=interp)
+ 
+-    # Upsample the eroded mask to determine output validity
+-    # Use nearest neighbor for mask to get clean boundaries
+-    mask_up = cv2.resize(
+-        mask_eroded.astype(np.uint8), (new_w, new_h), interpolation=cv2.INTER_NEAREST
+-    ).astype(bool)
++    mask_up = _resize_valid_mask(mask, (new_h, new_w), order)
+ 
+     # Set invalid points to -1 in-place (matching C++ convention)
+     invalid = ~mask_up
+diff --git a/vesuvius/tests/tifxyz/test_upsampling.py b/vesuvius/tests/tifxyz/test_upsampling.py
+new file mode 100644
+index 0000000..21b441c
+--- /dev/null
++++ b/vesuvius/tests/tifxyz/test_upsampling.py
+@@ -0,0 +1,148 @@
++"""Supplemental kernel regressions for the real-surface resampling failure.
++
++The impulse oracle measures OpenCV's support rather than duplicating its
++coordinate mapping. These small edge cases complement the real-scroll evidence.
++"""
++
++import cv2
++import numpy as np
++import pytest
++
++from vesuvius.tifxyz.upsampling import _resize_valid_mask, upsample_coordinates
++
++
++def _flag(order):
++    return {0: cv2.INTER_NEAREST, 3: cv2.INTER_CUBIC}.get(order, cv2.INTER_LINEAR)
++
++
++def _impulse_validity(mask, output_shape, order):
++    """Find invalid support without cancellation between signed cubic weights."""
++    invalid_support = np.zeros(output_shape, dtype=bool)
++    for row, col in np.argwhere(~mask):
++        impulse = np.zeros(mask.shape, dtype=np.float32)
++        impulse[row, col] = 1.0
++        resized = cv2.resize(
++            impulse, output_shape[::-1], interpolation=_flag(order)
++        )
++        # OpenCV may leave ~1e-17 residue at an exact source center. Ignore
++        # double-precision rounding noise, far below float32 coordinate accuracy.
++        invalid_support |= np.abs(resized) > 1e-12
++    return ~invalid_support
++
++
++def _resize(mask, output_shape, order):
++    rows, cols = np.indices(mask.shape, dtype=np.float32)
++    coordinates = (
++        np.where(mask, 3000.0 + cols, -1.0),
++        np.where(mask, 4000.0 + rows, -1.0),
++        np.where(mask, 5000.0 + rows + cols, -1.0),
++    )
++    source_scale = tuple(
++        source / target for source, target in zip(mask.shape, output_shape)
++    )
++    result = upsample_coordinates(
++        *coordinates, mask, source_scale=source_scale, order=order
++    )
++    return coordinates, result
++
++
++@pytest.mark.parametrize("order", [0, 1, 3, 2])
++@pytest.mark.parametrize(
++    "source_shape,output_shape",
++    [
++        ((1, 1), (3, 5)),
++        ((1, 4), (5, 9)),
++        ((4, 1), (9, 5)),
++        ((2, 2), (11, 22)),
++        ((3, 4), (3, 4)),
++        ((3, 4), (6, 12)),
++        ((7, 9), (11, 22)),
++        ((7, 9), (3, 4)),
++    ],
++)
++def test_each_invalid_vertex_matches_opencv_support(
++    source_shape, output_shape, order
++):
++    # Moving the hole across every vertex exercises all corners, edges, and
++    # interior taps. In particular, border replication must clamp each tap.
++    for row, col in np.ndindex(source_shape):
++        mask = np.ones(source_shape, dtype=bool)
++        mask[row, col] = False
++        coordinates, result = _resize(mask, output_shape, order)
++        expected_valid = _impulse_validity(mask, output_shape, order)
++        np.testing.assert_array_equal(
++            result[3], expected_valid, err_msg=f"invalid vertex {(row, col)}"
++        )
++        for source, resized in zip(coordinates, result[:3]):
++            expected = cv2.resize(
++                source, output_shape[::-1], interpolation=_flag(order)
++            )
++            # Valid coordinate interpolation remains exactly OpenCV's result.
++            np.testing.assert_array_equal(
++                resized[expected_valid], expected[expected_valid]
++            )
++            np.testing.assert_array_equal(resized[~expected_valid], -1.0)
++
++
++@pytest.mark.parametrize("order", [0, 1, 3, 2])
++def test_multiple_holes_use_union_of_kernel_support(order):
++    mask = np.ones((7, 9), dtype=bool)
++    mask[0, 0] = mask[-1, -1] = False
++    mask[2:4, 3:5] = False
++    _, result = _resize(mask, (11, 22), order)
++    np.testing.assert_array_equal(
++        result[3], _impulse_validity(mask, (11, 22), order)
++    )
++
++
++@pytest.mark.parametrize("order", [0, 1, 3, 2])
++def test_identity_preserves_mask_and_coordinates(order):
++    mask = np.array([[True, False, True], [False, True, True]])
++    coordinates, result = _resize(mask, mask.shape, order)
++    np.testing.assert_array_equal(result[3], mask)
++    for original, resized in zip(coordinates, result[:3]):
++        np.testing.assert_array_equal(resized, original)
++
++
++@pytest.mark.parametrize("order", [0, 1, 3, 2])
++@pytest.mark.parametrize("is_valid", [False, True])
++def test_uniform_mask_is_preserved_at_borders(order, is_valid):
++    mask = np.full((3, 4), is_valid, dtype=bool)
++    _, result = _resize(mask, (8, 11), order)
++    np.testing.assert_array_equal(result[3], is_valid)
++    if not is_valid:
++        for resized in result[:3]:
++            np.testing.assert_array_equal(resized, -1.0)
++
++
++def test_nearest_preserves_existing_mask_resize():
++    mask = np.array(
++        [[True, False, True, False], [False, True, True, True],
++         [True, True, False, True]]
++    )
++    _, result = _resize(mask, (8, 11), 0)
++    expected = cv2.resize(
++        mask.astype(np.uint8), (11, 8), interpolation=cv2.INTER_NEAREST
++    ).astype(bool)
++    np.testing.assert_array_equal(result[3], expected)
++
++
++@pytest.mark.parametrize("order", [1, 3])
++def test_large_identity_does_not_round_source_indices(order):
++    # Above 2**24, float32 cannot represent every integer source index.
++    # OpenCV's identity path copies pixels without this rounding.
++    mask = np.ones((1, 2**24 + 2), dtype=bool)
++    mask[0, -1] = False
++    actual = _resize_valid_mask(mask, mask.shape, order)
++    np.testing.assert_array_equal(actual, mask)
++
++
++@pytest.mark.parametrize("order", [1, 2])
++def test_large_exact_half_uses_all_four_area_taps(order):
++    # OpenCV switches exact 2x linear downsampling to a 2x2 area average.
++    # Float32 loses half-integers above 2**23; the shortcut must stay integer.
++    mask = np.ones((2, 2**23 + 2), dtype=bool)
++    mask[0, -1] = False
++    actual = _resize_valid_mask(mask, (1, mask.shape[1] // 2), order)
++    assert not actual[0, -1]
++    assert actual[0, :-1].all()
