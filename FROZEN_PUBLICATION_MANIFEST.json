@@ -12,34 +12,14 @@
       "sha256": "fb064740edcca66b277987f5601df4f7003a63f6939495b2fa9b3409eabe3337"
     },
     {
-      "path": "EDITORIAL_UPDATE_2026-10-01.md",
-      "bytes": 537,
-      "sha256": "80eadb75e8c606119c89b9377790d9f43abbb5fc3b66a61a63f43635dbd6a0a4"
-    },
-    {
       "path": "ENTRANT_VIEW.md",
       "bytes": 657,
       "sha256": "8f44600a2b22e7335b30c2a8772925c51155d0ada473a98bc6f612b4452af020"
     },
     {
-      "path": "FROZEN_PUBLICATION_MANIFEST.json",
-      "bytes": 11099,
-      "sha256": "ca43a73978d9ad311336f0b84caec916cd5e6f0302dfa799d137cf1489235070"
-    },
-    {
-      "path": "FROZEN_PUBLICATION_SHA256SUMS",
-      "bytes": 6784,
-      "sha256": "6244ef792cfe67e72df536dc406445db7cc7a0558658dbb97534673d4813dbdf"
-    },
-    {
       "path": "LICENSE",
       "bytes": 1075,
       "sha256": "87070eec603117b5365e2172999e81b08890aef91c1673383cf9779ee9c89976"
-    },
-    {
-      "path": "PROVENANCE_CLARIFICATION.md",
-      "bytes": 1024,
-      "sha256": "f51be18f3f9d986fce964350ca0e0f448c90542fa37e1406dc66adfcdd324e85"
     },
     {
       "path": "PUBLICATION_NOTES.md",
@@ -48,8 +28,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3852,
-      "sha256": "7936f640f2c72e805b8f5f69f4ff16a56f7115f6e0000d260ab38248c8dea856"
+      "bytes": 3718,
+      "sha256": "6582f919d008005fd9724475ce6644cb95c1cc83ecfc2c75e41986b06d7aead9"
     },
     {
       "path": "REPRODUCE.md",
@@ -328,11 +308,5 @@
     }
   ],
   "count": 61,
-  "scope": "All prepared release files; this manifest and SHA256SUMS are excluded",
-  "editorial_revision": {
-    "date": "2026-10-01",
-    "scope": "README link and provenance clarification; no scientific artifact changed",
-    "original_manifest": "FROZEN_PUBLICATION_MANIFEST.json",
-    "original_sha256sums": "FROZEN_PUBLICATION_SHA256SUMS"
-  }
+  "scope": "All prepared release files; this manifest and SHA256SUMS are excluded"
 }

@@ -20,6 +20,7 @@ Coordinates accepted by both versions are bit-for-bit identical. Nearest-neighbo
 ## Review and reproduce
 
 - [Technical report](REVIEW_REPORT.md) — methods, results, timing and limitations
+- [Thread-configuration clarification](PROVENANCE_CLARIFICATION.md) — recorded environment discrepancy; original evidence preserved
 - [Patch](evidence/tifxyz-resampling-validity.patch) — two changed files against pinned upstream `d8c5f488a105286c548c99c5f7c7ad9f29e3ed14`
 - [Reproduction instructions](REPRODUCE.md) — reconstruct the source and run the checks
 - [Quantitative evidence](evidence/real_mesh_results.json) and [run log](evidence/real_mesh_run.log)
