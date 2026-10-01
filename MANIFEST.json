@@ -327,7 +327,7 @@
       "sha256": "ecd65e159b24575b62d062524ab15378c4d251258f9ed6b21bd49000494b55eb"
     }
   ],
-  "count": 61,
+  "count": 65,
   "scope": "All prepared release files; this manifest and SHA256SUMS are excluded",
   "editorial_revision": {
     "date": "2026-10-01",
