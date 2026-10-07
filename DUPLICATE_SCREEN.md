@@ -2,7 +2,7 @@
 
 ## Finding
 
-No matching public issue or PR was found for the specific disagreement between linear/cubic coordinate interpolation and the nearest-resized eroded validity mask in `vesuvius.tifxyz.upsampling.upsample_coordinates`. This supports continuing the local real-data correction. It does not establish exhaustive novelty, maintainer interest, prize eligibility, or an award.
+No matching public issue or PR was found for the specific disagreement between linear/cubic coordinate interpolation and the nearest-resized eroded validity mask in `vesuvius.tifxyz.upsampling.upsample_coordinates`. This finding is limited to the search terms, references, and date recorded below.
 
 The checked implementation uses OpenCV resize for XYZ and a separately resized validity mask. The proposed correction changes the validity calculation while preserving coordinate interpolation. It concerns the directly exported Python API; the local repository search found no active internal caller beyond exports and tests. Production use remains unestablished.
 
@@ -31,8 +31,8 @@ The temporary API metadata cache from the broader screen is not part of this pub
 
 ## Other geometry work deliberately excluded
 
-Generic self-intersection tools and a new sheet-switch checker would overlap existing contributions: [#1641](https://github.com/ScrollPrize/villa/issues/1641), [#1150](https://github.com/ScrollPrize/villa/issues/1150), and [July's awarded work](https://scrollprize.substack.com/p/335k-awarded-in-july). The [August awards update](https://github.com/ScrollPrize/villa/pull/1720) adds further patch-based unwrapping and tool improvements. This draft makes no competing discovery claim in those areas.
+Generic self-intersection tools and a new sheet-switch checker would overlap existing contributions: [#1641](https://github.com/ScrollPrize/villa/issues/1641), [#1150](https://github.com/ScrollPrize/villa/issues/1150), and [July's awarded work](https://scrollprize.substack.com/p/335k-awarded-in-july). The [August awards update](https://github.com/ScrollPrize/villa/pull/1720) adds further patch-based unwrapping and tool improvements. Those references define work outside the resize-validity correction’s scope.
 
-## Publication boundary
+## Upstream contribution requirements
 
-The upstream [contribution policy](https://github.com/ScrollPrize/villa/blob/main/CONTRIBUTING.md) supports AI coding assistance but requires human use of scroll tools, human-written relevance commentary, human code review, and real-data evidence. The local run supplies measured API evidence; it cannot supply the missing human statement or claim human review. No PR, issue, contest submission, or external message was posted by this documentation task.
+The preserved [upstream contribution policy](baseline/CONTRIBUTING.md) and [pull request template](baseline/pull_request_template.md) require personal use of scroll tools, human-written relevance commentary, code review, real-data evidence, and a personal-verification statement for an upstream PR. These external requirements remain preserved for review before an upstream submission. The local geometry measurements cover the evidence described in this repository.

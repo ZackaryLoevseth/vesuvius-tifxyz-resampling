@@ -7,19 +7,19 @@
       "sha256": "886bbf773623103e452358e46d70beb9b7ebe58712841730edc16eca77b12f47"
     },
     {
+      "path": "AGENTS.md",
+      "bytes": 2385,
+      "sha256": "ee5cda908e428a8d747f73d604b536e6581b219d9d2e06972cac1da98274e650"
+    },
+    {
       "path": "DUPLICATE_SCREEN.md",
-      "bytes": 4039,
-      "sha256": "fb064740edcca66b277987f5601df4f7003a63f6939495b2fa9b3409eabe3337"
+      "bytes": 4012,
+      "sha256": "3c906feaf4a65036f03f55ca9eb1ec9d02a8277bc3b252ad3867e7e5c910fdaf"
     },
     {
       "path": "EDITORIAL_UPDATE_2026-10-01.md",
       "bytes": 537,
       "sha256": "80eadb75e8c606119c89b9377790d9f43abbb5fc3b66a61a63f43635dbd6a0a4"
-    },
-    {
-      "path": "ENTRANT_VIEW.md",
-      "bytes": 657,
-      "sha256": "8f44600a2b22e7335b30c2a8772925c51155d0ada473a98bc6f612b4452af020"
     },
     {
       "path": "FROZEN_PUBLICATION_MANIFEST.json",
@@ -38,28 +38,33 @@
     },
     {
       "path": "PROVENANCE_CLARIFICATION.md",
-      "bytes": 1024,
-      "sha256": "f51be18f3f9d986fce964350ca0e0f448c90542fa37e1406dc66adfcdd324e85"
+      "bytes": 941,
+      "sha256": "4a20f223a945f129c517e115cc3efa756f9f6d2c89f5c7837c3f815fe92295ba"
     },
     {
       "path": "PUBLICATION_NOTES.md",
-      "bytes": 1385,
-      "sha256": "344b99d8fa6b952d5e348f69ac0f824a8ce3f4c793f5d27b830d68cdc01a37af"
+      "bytes": 1390,
+      "sha256": "7e6b43a6963c369395ac4414399e228a214eda3b32c6277cf3a09018ce67b74b"
     },
     {
       "path": "README.md",
-      "bytes": 3852,
-      "sha256": "7936f640f2c72e805b8f5f69f4ff16a56f7115f6e0000d260ab38248c8dea856"
+      "bytes": 3055,
+      "sha256": "0d85a3773045584e1f74207fa11d1db7405ff10a7e834f6c92a43cb4c8489fc1"
     },
     {
       "path": "REPRODUCE.md",
-      "bytes": 4096,
-      "sha256": "8228a0670843697ac1a53c75aaa657daa9c5247224b0fbab2350bb2aa464fe45"
+      "bytes": 4171,
+      "sha256": "0189ee6a01b8168b4ff27f3b6e02c5605661d9056d07f6df813542e68e78113b"
     },
     {
       "path": "REVIEW_REPORT.md",
-      "bytes": 8193,
-      "sha256": "7c25dd19c4054040694aec2909776dc58dc41bc7d00b27e1fad6a19c92c0ccd2"
+      "bytes": 7447,
+      "sha256": "8156dce6630f09c8349acd056da802371fda95dc51bda2f317d7cbc3b87a439d"
+    },
+    {
+      "path": "SCOPE.md",
+      "bytes": 668,
+      "sha256": "85b96c15a9c10757ae1942e939c97b668d34ec058da3b999623dd801940f1528"
     },
     {
       "path": "baseline/CONTRIBUTING.md",
@@ -288,8 +293,8 @@
     },
     {
       "path": "tools/NUMERIC_RESIZE_REVIEW.md",
-      "bytes": 5397,
-      "sha256": "418db87f206593e6e0f81b03fa5941af92c8ce9402d4f2778717b0492e8333b8"
+      "bytes": 5384,
+      "sha256": "76536f4698840a3ddb5ab1f55eed56954cbcd4ce5d3949c20c2d51c3e10810bf"
     },
     {
       "path": "tools/check_regression_baseline.py",
@@ -322,16 +327,21 @@
       "sha256": "fc8522333af872d48b87c78d7e362da0ea6f96c612c3a351662799bdbd49b8a6"
     },
     {
+      "path": "tools/update_manifest.py",
+      "bytes": 2364,
+      "sha256": "65c4bb99b658ec824fb2cddb5102312f14ec2881fe790eae1f65cf1553393840"
+    },
+    {
       "path": "tools/validate_real_meshes.py",
       "bytes": 8523,
       "sha256": "ecd65e159b24575b62d062524ab15378c4d251258f9ed6b21bd49000494b55eb"
     }
   ],
-  "count": 65,
-  "scope": "All prepared release files; this manifest and SHA256SUMS are excluded",
+  "count": 67,
+  "scope": "Current public presentation tree; MANIFEST.json and SHA256SUMS, Git metadata, and ignored local files are excluded",
   "editorial_revision": {
-    "date": "2026-10-01",
-    "scope": "README link and provenance clarification; no scientific artifact changed",
+    "date": "2026-10-07",
+    "scope": "HayosoAi public identity and scope wording; measured scientific artifacts unchanged",
     "original_manifest": "FROZEN_PUBLICATION_MANIFEST.json",
     "original_sha256sums": "FROZEN_PUBLICATION_SHA256SUMS"
   }

@@ -19,7 +19,7 @@ The old nearest-resized eroded mask samples a different inverse map from linear/
 
 `review_oracle.py` measures the installed float32 resize operator with one unit impulse per source pixel. A destination is valid exactly when none of the invalid source impulses produce a nonzero output there. It uses no helper from the candidate. A second implementation derives ideal support using exact rational half-pixel positions and border clamping.
 
-The two oracles agree on **154 small fixture combinations**: identity, twofold enlargement/reduction, noninteger scaling, mixed anisotropic scaling, single unchanged or halved axes, one-row/one-column images, and integer source centers, each with seven validity patterns and both linear/cubic interpolation. `independent_oracle_self_review.json` records this result. This checks the oracle; it does **not** by itself assert candidate correctness. Another review agent owns the production regression tests.
+The two oracles agree on **154 small fixture combinations**: identity, twofold enlargement/reduction, noninteger scaling, mixed anisotropic scaling, single unchanged or halved axes, one-row/one-column images, and integer source centers, each with seven validity patterns and both linear/cubic interpolation. `independent_oracle_self_review.json` records this result. This checks agreement between the two oracles. Candidate behavior is evaluated separately by the production regression tests.
 
 ## Confirmed large-dimension exceptions in the first candidate
 
