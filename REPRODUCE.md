@@ -48,4 +48,4 @@ AGENTS_AGENT_MODE=1 PYTHONPATH="$PWD/.cv4:$PWD/source/vesuvius/src" NUMBA_NUM_TH
 
 Use the original inputs already included under `data/`; their manifest contains anonymous official download URLs if re-acquisition is needed. The primary real-data tests do not use generated meshes. The unit tests use controlled edge cases as supplemental numerical regressions.
 
-Data and derived figures remain attributed under CC BY-NC 4.0; see `data/README.md`. Code retains its upstream MIT license. Source hashes and a passing local patch do not establish community adoption, human review, prize submission, eligibility, or payment.
+Data and derived figures remain attributed under CC BY-NC 4.0; see `data/README.md`. Code retains its upstream MIT license. These commands reproduce the local geometry checks; upstream contribution and competition requirements are recorded separately in [DUPLICATE_SCREEN.md](DUPLICATE_SCREEN.md#upstream-contribution-requirements).

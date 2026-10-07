@@ -15,7 +15,7 @@ Three byte-original PHerc0800 surface patches were resized at their metadata sca
 
 Coordinates accepted by both versions are bit-for-bit identical. Nearest-neighbor output is unchanged. The same number of wrongly rejected valid locations is recovered in these fixtures.
 
-53 focused regression tests pass on OpenCV 5.0.0 and 4.14.0; 21 nearby I/O/preflight tests also pass. This is a direct API geometry evaluation on three patches of one scroll. Community adoption, downstream CT/ink improvement, maintainer acceptance, and a prize award are not established.
+53 focused regression tests pass on OpenCV 5.0.0 and 4.14.0; 21 nearby I/O/preflight tests also pass. The result is a direct API geometry evaluation on three patches of one scroll. [Evaluation scope](SCOPE.md) describes the tested domain.
 
 ## Review and reproduce
 
@@ -30,17 +30,9 @@ Coordinates accepted by both versions are bit-for-bit identical. Nearest-neighbo
 
 The `review_source/` directory contains the two changed files for inspection. It is not a complete package; use the pinned-source reconstruction instructions. Code, patch and tests are included, not only a report.
 
-## Entrant’s stated view
+## Evaluation scope
 
-The following view was explicitly endorsed by Zackary Loevseth; the wording was prepared with AI assistance:
-
-> I see this as a useful, reproducible geometry correction. The fix was demonstrated on three genuine scroll meshes. For workflows using this function, it prevents this source of bad geometry from passing into later rendering or analysis.
->
-> I also recognize the limits: we haven’t demonstrated improved ink recognition or confirmed regular community use of this particular function. Its practical importance and any prize value still depend on maintainer review and adoption.
-
-## Contribution transparency
-
-Codex performed implementation, real-data execution, documentation, and independent AI-assisted review at the entrant’s request. The entrant supplied approval of the stated assessment and publication/submission. Personal human code review has not been represented as completed. This evidence repository is not an upstream pull request and does not assert compliance with its separate personal-verification checkbox.
+This HayosoAi evidence package demonstrates a geometry correction on three original scroll meshes. For the tested inputs, the patch prevents missing-vertex values from contaminating accepted output coordinates. Downstream CT/ink quality and community adoption remain separate evaluation questions.
 
 ## Licenses and provenance
 
